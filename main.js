@@ -1,16 +1,4 @@
-// --- Page Loader ---
-const pageLoader = document.createElement('div');
-pageLoader.id = 'page-loader';
-pageLoader.innerHTML = '<div class="loader-spinner"></div>';
-document.documentElement.appendChild(pageLoader);
-
-window.addEventListener('load', () => {
-    // Immediate smooth fade out on load
-    pageLoader.classList.add('fade-out');
-    setTimeout(() => pageLoader.remove(), 300);
-});
-
-// Utility to prevent XSS
+// --- Utility to prevent XSS ---
 const escapeHTML = (str) => {
     if (typeof str !== 'string') return str;
     return str.replace(/[&<>'"]/g, 
@@ -652,21 +640,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // --- Massive Animation & Effects Upgrade ---
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. Custom Cursor
-    const cursor = document.createElement('div');
-    cursor.classList.add('custom-cursor');
-    document.body.appendChild(cursor);
-    
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-    
-    document.querySelectorAll('a, button, .card, input, textarea').forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-    });
-
     // 2. Auto-inject animation classes (saves modifying HTML files)
     document.querySelectorAll('.card').forEach((el, index) => {
         el.classList.add('animate-on-scroll', 'animate-slide-up', 'tilt-card');
