@@ -41,6 +41,18 @@ const portfolioData = {
             ]
         }
     ],
+    workExperience: [
+        {
+            company: "Techpath Research and Development Pvt. Ltd.",
+            role: "Trainee",
+            dates: "May 2026 - Present",
+            highlights: [
+                "Executing digital marketing strategies, keyword research, and on-page/off-page SEO optimizations to enhance search engine ranking and organic traffic.",
+                "Assisting in campaign performance tracking using Google Analytics (GA4) and creating automated reporting dashboards to evaluate marketing ROI.",
+                "Developing AI-powered content generation workflows and prompt templates for streamlined social media marketing and brand engagement."
+            ]
+        }
+    ],
     testimonials: [],
     blogs: []
 };
